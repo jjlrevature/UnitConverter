@@ -16,6 +16,8 @@ public class Converter {
 		//assign user input to variable
 		int topMenu = scan.nextInt();	
 		
+		
+		
 		/*
 		 * Determine which unit conversion the user wants to utilize, 
 		 * through the use of 2 separate menu's.
@@ -53,8 +55,9 @@ public class Converter {
 						System.out.println(input2 + " Hz is equivalant to " + resultWavelength(input2) + " inches \n");	
 						firstSelection = 3;
 						break;
-					case 3:
-						break alpha;
+					default :
+						System.out.println("Please enter a valid number");
+						firstSelection = scan.nextInt();
 					}	
 				}				
 				break;
@@ -82,7 +85,10 @@ public class Converter {
 						double input4 = scan.nextInt();
 						System.out.println(input4 + " degrees Celsius is equivalant to " + resultFahren(input4) + " degrees Fahrenheit \n");
 						secondSelection = 3;
-						break;					
+						break;
+					default:
+						System.out.println("Please enter a valid number");
+						secondSelection = scan.nextInt();
 					}
 				}
 				break;			
