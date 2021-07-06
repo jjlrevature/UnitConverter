@@ -21,7 +21,7 @@ public class Converter {
 		 * Allows user to input a new variable and switches accordingly.		 * 		 
 		 */
 		
-		//assign user input to variable			
+		//assign placeholder value		
 		int topMenu = 5;	
 		
 		
@@ -31,7 +31,7 @@ public class Converter {
 			// call the initial menu
 			topMenu();
 			
-			int placeholder = 6;
+			
 			topMenu = userInput(topMenu, scan);
 			
 			switch(topMenu) {
@@ -60,7 +60,10 @@ public class Converter {
 						double input2 = userInput(firstSelection, scan);
 						System.out.println(input2 + " Hz is equivalant to " + resultWavelength(input2) + " inches \n");	
 						firstSelection = 3;
-						break;	
+						break;
+					default: 
+						System.out.println(" Please enter a valid number");
+						firstSelection = userInput(topMenu, scan);					
 					}
 				}				
 				break;
@@ -89,6 +92,9 @@ public class Converter {
 						System.out.println(input4 + " degrees Celsius is equivalant to " + resultFahren(input4) + " degrees Fahrenheit \n");
 						secondSelection = 3;
 						break;
+					default: 
+						System.out.println(" Please enter a valid number");
+						secondSelection = userInput(topMenu, scan);					
 					}
 				}
 			default :	
